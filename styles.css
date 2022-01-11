@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: 350px;
+    width: 100vw;
+    background-image: url("bg-img.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+div.container{
+    display: flex;
+    justify-content: center;
+    /* height: calc(100vh - 350px - 45px); */
+}
+div.todo-Box {
+    /* position: absolute;
+    top: 95px;
+    left: 35%; */
+    position: relative;
+    top: -255px;
+    width: 460px;
+    display: flex;
+    flex-direction: column;
+}
+
+div.todo-Box .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+div.todo-Box .heading h1 {
+    font-size: 30px;
+    color: white;
+    font-family: cursive;
+    font-weight: 900;
+}
+/***** toggle button at end *****/
+
+div.todo-Box .addTaskBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 28px;
+    opacity: 0.94;
+}
+div.todo-Box .addTaskBar input {
+    flex-basis: 90%;
+    height: 42px;
+    font-size: 19px;
+    border: none;
+    outline: none;
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+    padding: 5px 20px;
+    color: rgba(0, 0, 0, 0.8);
+}
+div.todo-Box .addTaskBar button {
+    flex-basis: 10%;
+    height: 42px;
+    font-size: 25px;
+    border: none;
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+    background-color: #fff;
+    cursor: pointer;
+    color: darkblue;
+}
+
+div.todo-Box section.todoList {
+    background-color: #eeeeee;
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+    margin: 46px 0;
+    padding: 10px;
+    max-height: 410px;
+    overflow-y: scroll;
+}
+section.todoList .list-headings {
+    background-color: rgb(255, 251, 251);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 32px;
+    padding: 10px;
+    opacity: 0.95;
+    color: rgba(0, 0, 0, 0.9);
+    font-family: 'Times New Roman', Times, serif;
+}
+section.todoList .list-headings p:nth-child(2) > span {
+    margin: 4.5px;
+}
+
+ul.taskList {
+    margin: 20px 0 0;
+}
+ul.taskList > li {
+    background-color: #fff;
+    margin-top: 8px;
+    height: 35px;
+    padding: 8px;
+    opacity: 0.95;
+    list-style: none;
+    color: rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgb(224, 224, 224);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}
+
+section.myName {
+    text-transform: capitalize;
+    color: darkblue;
+    font-size: 19px;
+}
+
+section.links {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 180px;
+}
+section.links i {
+    font-size: 24px;
+}
+
+
+/***** toggle button to change theme *****/
+#switch {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+label.switch-label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 70px;
+    height: 35px;
+    background: #fff;
+    display: block;
+    border-radius: 10px;
+    position: relative;
+}
+
+label.switch-label:after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 25px;
+    height: 25px;
+    background: #f6d327;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+input#switch:checked+label.switch-label {
+    background: #111;
+}
+
+input#switch:checked+label.switch-label:after {
+    background: #E63E6D;
+}
+
+input#switch:checked+label.switch-label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+label.switch-label:active:after {
+    width: 80px;
+}
